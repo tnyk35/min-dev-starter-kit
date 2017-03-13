@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: normal;
+  src: local("YuGothic-Medium"), local("Yu Gothic Medium"), local("YuGothic-Regular");
+}
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: bold;
+  src: local("YuGothic-Bold"), local("Yu Gothic");
+}
+html {
+  font-family: -apple-sysytem, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", MyYugothicM, Meiryo, sans-serif;
+}

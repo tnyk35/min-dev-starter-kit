@@ -1,0 +1,19 @@
+extends _parts/_layout
+
+block includeJs
+  script(src='./assets/js/template.js')
+
+block vars
+  -
+    var title = 'トップページ'
+    var description = 'トップページの説明がはいります'
+
+block content
+  p.test testクラス付与で右にスライドするよ
+  p !{description}
+  p 〜
+  p.js-test クリックで赤に変わる
+  p.js-test クリックで赤に変わる
+  p.js-test クリックで赤に変わる
+  p.js-test クリックで赤に変わる
+  p.js-test クリックで赤に変わる
