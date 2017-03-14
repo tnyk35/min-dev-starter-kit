@@ -75,25 +75,19 @@ module.exports = {
 
   /*
    * config javascript その１
-   *
+   * パーシャルも対応。JSファイルを任意の位置において変換がかかる
    * その２：その１の下にあるので、その１をコメントアウトして、その２のコメントアウトをはずしてください。
    *
-   * その３：entryのassets/js/common部分をコメントアウトしてください。そのあとに、各個別ページのJSにcommon.jsをインクルードする記述をしてください。
    */
   js: {
-    src: root.src + '**/*.js',
-    dest: root.dest + 'html',
+    src: [
+      root.src + '**/*.js',
+      '!' + root.src + '**/_*.js'
+    ],
+    dest: root.dest,
     uglify: true,
 
     webpack: {
-      // jsファイル書き出したい時にここに追加する
-      // TODO:jsファイルを自動検知できるようにしたい
-      entry: {
-        'assets/js/common': './src/html/assets/js/common.js',
-        'assets/js/template': './src/html/assets/js/template.js',
-        'assets/js/template_es': './src/html/assets/js/template_es.js',
-        'js/top': './src/html/js/top.js'
-      },
       output: {
         // path: __dirname,
         filename: '[name].js'
@@ -126,6 +120,8 @@ module.exports = {
 
   /*
    * config javascript その２
+   * common.jsに統一したい場合に使用する
+   * named部分をコメントアウトする
    */
   // js: {
   //   src: root.src + '**/*.js',
