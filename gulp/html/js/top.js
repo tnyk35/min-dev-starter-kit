@@ -1,1 +1,84 @@
-!function(n){function e(r){if(o[r])return o[r].exports;var t=o[r]={exports:{},id:r,loaded:!1};return n[r].call(t.exports,t,t.exports,e),t.loaded=!0,t.exports}var o={};e.m=n,e.c=o,e.p="",e(0)}([function(n,e){"use strict";function o(n,e){if(!(n instanceof e))throw new TypeError("Cannot call a class as a function")}var r=function(){function n(n,e){for(var o=0;o<e.length;o++){var r=e[o];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(n,r.key,r)}}return function(e,o,r){return o&&n(e.prototype,o),r&&n(e,r),e}}();!function(){function n(){o(this,n)}r(n,[{key:"sayHello",value:function(){console.log("Hello World!")}}]),n}()}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 0:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(5);
+
+
+/***/ },
+
+/***/ 5:
+/***/ function(module, exports) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	/*
+	 * その３でcommonを共通moduleとして利用する場合にコメントアウトをとってください。
+	 */
+	// const common = require("../assets/js/common");
+
+	var test = function () {
+	  function test() {
+	    _classCallCheck(this, test);
+	  }
+
+	  _createClass(test, [{
+	    key: 'sayHello',
+	    value: function sayHello() {
+	      console.log('Hello World!');
+	    }
+	  }]);
+
+	  return test;
+	}();
+
+/***/ }
+
+/******/ });
