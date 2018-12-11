@@ -7,6 +7,7 @@ var
 /**
  * image
  * 画像を圧縮
+ * 一応つけておくけど、TinyPNG推奨
  */
 gulp.task('image', function(e) {
   return gulp.src(config.image.src)
@@ -17,7 +18,7 @@ gulp.task('image', function(e) {
         use: [pngquant(config.image.option)]
       })
     )
-    .pipe(imagemin()) //ここでガンマ情報を除去！
+    .pipe(imagemin())
     .pipe(gulp.dest(config.image.dest))
     .pipe(config.required.print())
     .pipe(config.required.size({title: '*** optimize image ***'}));

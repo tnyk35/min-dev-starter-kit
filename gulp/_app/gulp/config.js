@@ -84,6 +84,9 @@ module.exports = {
       root.src + '**/*.js',
       '!' + root.src + '**/_*.js'
     ],
+    src_watch: [
+      root.src + '**/*.js'
+    ],
     dest: root.dest,
     uglify: true,
 

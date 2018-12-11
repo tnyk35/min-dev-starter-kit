@@ -9,13 +9,8 @@ var
  */
 gulp.task('browserSync', () => {
   browserSync.init(config.browserSync.options);
-});
 
-
-/**
- * bs-reload
- * ローカルサーバーをリロード
- */
-gulp.task('bs-reload', () => {
-  browserSync.reload();
+  gulp.watch('../html/**', () => {
+    browserSync.reload();
+  });
 });
