@@ -30,8 +30,8 @@ gulp.task('watch', () => {
       config.stylus.changed = !/\/_.[^\/]+\.styl/.test(file.path);
     }
   }));
-  gulp.watch(config.js.src_watch, ['webpack']);
-  gulp.watch(config.image.src, ['image']);
+  // gulp.watch(config.js.src_watch, ['webpack']);
+  // gulp.watch(config.image.src, ['image']);
 });
 
 /*
@@ -54,12 +54,13 @@ gulp.task('server', ['browserSync'], () => {
       config.stylus.changed = !/\/_.[^\/]+\.styl/.test(file.path);
     }
   }));
-  gulp.watch(config.js.src_watch, ['webpack', 'bs-reload']);
-  gulp.watch(config.image.src, ['image', 'bs-reload']);
+  // gulp.watch(config.js.src_watch, ['webpack', 'bs-reload']);
+  // gulp.watch(config.image.src, ['image', 'bs-reload']);
 });
 /*
  * build
  *
  * 全ファイル書き出し用タスク
  */
-gulp.task('build', ['pug', 'stylus', 'image', 'webpack']);
+// gulp.task('build', ['pug', 'stylus', 'image', 'webpack']);
+gulp.task('build', ['pug', 'stylus']);
