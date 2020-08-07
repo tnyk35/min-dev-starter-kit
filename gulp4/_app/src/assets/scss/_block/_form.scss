@@ -1,0 +1,27 @@
+/* ============= */
+/* フォーム */
+/* ============= */
+.b-form {
+  max-width: 708px;
+  margin: 0 auto;
+  // リセット
+  [type="text"],
+  [type="email"],
+  [type="submit"],
+  [type="checkbox"],
+  select,
+  textarea {
+    appearance: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    resize: none;
+    outline: 0;
+    vertical-align: middle;
+    border-radius: 0;
+    box-shadow: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.2;
+    cursor: pointer;
+  }
+}

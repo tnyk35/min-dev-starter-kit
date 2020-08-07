@@ -1,0 +1,44 @@
+-
+  var title = 'サイトタイトル'
+  var description = 'サイトの説明文が入る'
+  var imgDir = './assets/images/'
+  var imgCommon = imgDir + 'common/'　
+  var pageId = ''
+  
+include _functions
+
+block vars
+doctype html
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    meta(type='description' content!=description)
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(property="og:title" content!=title)
+    meta(property="og:site_name" content!=title)
+    meta(property="og:type" content="website")
+    meta(property="og:url" content="")
+    meta(property="og:image" content="")
+    meta(property="og:locale" content="ja_jp")
+    meta(property="og:description" content!=description)
+    title !{title}
+    link(rel="icon" href="./assets/images/favicon.ico")
+    link(rel='stylesheet' href='./assets/css/swiper.min.css')
+    link(rel='stylesheet' href='./assets/css/style.css')
+    block includeCss
+
+    script(src="./assets/js/jquery-3.5.1.js")
+    script(src='./assets/js/swiper.min.js')
+    script(src='./assets/js/common.js')
+    
+    block includeJs
+
+  body(class=bodyClass)
+    #wrap
+      div(id=pageId).pageWrap
+        include _header
+
+        main#content
+          block content
+
+        include _footer

@@ -1,0 +1,84 @@
+.u-
+  &hr
+    border 0
+    border-top 1px solid $gray8
+    margin 75px 0
+
+  &mt0
+    margin-top 0 !important
+  &mb0
+    margin-bottom 0 !important
+  &pt0
+    padding-top 0 !important
+  &pb0
+    padding-bottom 0 !important
+
+  for $num in (1..20)
+    &mt{$num * 5}
+      margin-top ($num * 5)px !important
+    &mt{$num * 5}-pc
+      +pc()
+        margin-top ($num * 5)px !important
+    &mt{$num * 5}-sp
+      +sp()
+        margin-top ($num * 5)px !important
+    &mb{$num * 5}
+      margin-bottom ($num * 5)px !important
+    &mb{$num * 5}-pc
+      +pc()
+        margin-bottom ($num * 5)px !important
+    &mb{$num * 5}-sp
+      +sp()
+        margin-bottom ($num * 5)px !important
+
+  &taL
+    text-align left !important
+  &taC
+    text-align center !important
+  &taR
+    text-align right !important
+
+  &fwB
+    font-weight bold !important
+  
+  &fwM
+    font-weight 500 !important
+
+  &onlyPc
+    +sp()
+      display none !important
+
+  &onlySp
+    +pc()
+      display none !important
+    +tab()
+      display none !important
+
+  &noScroll
+    overflow hidden
+
+  &hover
+    transition all .3s
+    &:hover
+      opacity .7
+
+  for $num in (1..10)
+    &orderSp{$num}
+      @media screen and (max-width: 839px)
+        order $num
+
+  &delay1
+    transition-delay: 0.3s
+
+  &delay2
+    transition-delay: 0.5s
+
+  &delay3
+    transition-delay: 0.7s
+
+  &delay4
+    transition-delay: 0.9s
+
+
+  &fcRed
+    color #C62222 !important

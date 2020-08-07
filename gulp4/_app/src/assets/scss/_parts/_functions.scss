@@ -1,0 +1,31 @@
+@mixin pc() {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+@mixin sp() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin link1() {
+  transition: opacity .3s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+@mixin thumbBg() {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@function per($num1, $num2) {
+  @return ($num1 / $num2 * 100%);
+}
+
+@function vw($num1, $num2) {
+  @return ($num1 / $num2 * 100vw);
+}

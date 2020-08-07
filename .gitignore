@@ -1,4 +1,15 @@
 .DS_Store
 node_modules
-_app/node/token.json
 yarn.lock
+
+# ndenv
+.node-version
+
+# nvm
+.nvmrc
+
+# IDE
+.idea
+
+# wordpress用パーツの吐き出しディレクトリ
+wp-page

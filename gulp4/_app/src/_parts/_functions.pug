@@ -1,0 +1,10 @@
+-
+  var bp_PC = 769
+  var bp_SP = 768
+
+mixin pic1(pc, sp, alt)
+  picture
+    source(media="(min-width: " + bp_PC + "px)", srcset!=pc)
+    source(media="(max-width: " + bp_SP + "px)", srcset!=sp)
+    img(src!=pc, alt!=alt)
+
