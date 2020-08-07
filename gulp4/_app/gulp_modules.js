@@ -1,0 +1,17 @@
+module.exports = {
+  pug: require('gulp-pug'),
+  sass: require('gulp-sass'),
+  stylus: require('gulp-stylus'),
+  browserSync: require('browser-sync'),
+  autoprefixer: require("gulp-autoprefixer"),
+  rename: require('gulp-rename'),
+  packageImporter: require("node-sass-package-importer"),
+  plumber: require('gulp-plumber'),
+  notify: require('gulp-notify'),
+  print: require('gulp-print').default,
+  size: require('gulp-size'),
+  frep: require('gulp-frep'),
+  convertEncoding: require('gulp-convert-encoding'),
+  sourcemaps: require('gulp-sourcemaps'),
+  minifyCSS: require('gulp-csso'),
+}

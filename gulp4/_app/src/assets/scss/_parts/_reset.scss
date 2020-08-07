@@ -1,0 +1,196 @@
+/* ***********************************
+ *
+ *    Ire's CSS Reset & Base
+ *
+ * *********************************** */
+
+/* Reset margin, padding, border
+ * *********************************** */
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+// ol, ul,
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Typography
+ * *********************************** */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  letter-spacing: 0.04em
+}
+
+
+/* Layout
+ * *********************************** */
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Elements
+ * *********************************** */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+th,
+td {
+  padding: 0.75rem;
+}
+
+th {
+  text-align: left;
+}
+
+ol,
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+img {
+  border-style: none;
+  vertical-align: top;
+}
+
+
+code,
+kbd,
+tt,
+var {
+  color: #fff;
+  background: #000;
+  font-family: "Consolas", "monaco", monospace;
+  font-size: 1.2rem;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 0 20px;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+pre {
+  overflow: auto;
+  padding: 1.5rem;
+  color: #fff;
+  background: #000;
+  font-family: "Consolas", "monaco", monospace;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}

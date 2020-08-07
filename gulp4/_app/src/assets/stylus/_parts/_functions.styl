@@ -1,0 +1,23 @@
+pc()
+  @media screen and (min-width: 769px)
+    {block}
+
+sp()
+  @media screen and (max-width: 768px)
+    {block}
+
+per(num1, num2)
+  num1 / num2 * 100%
+
+vw(num1, num2)
+  num1 / num2 * 100vw
+
+link1()
+  transition opacity .3s
+  &:hover
+    opacity 0.7
+
+thumbBg()
+  background-size cover
+  background-repeat no-repeat
+  background-position center center

@@ -1,0 +1,173 @@
+/* ============= */
+/* フォーム */
+/* ============= */
+.b-form
+  max-width 708px
+  margin 0 auto
+  // リセット
+  [type="text"]
+  [type="email"]
+  [type="submit"]
+  [type="checkbox"]
+  select
+  textarea
+    appearance none
+    border 0
+    padding 0
+    margin 0
+    resize none
+    outline 0
+    vertical-align: middle
+    border-radius: 0
+    box-shadow 0
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height 1.2
+    letter-spacing 0
+    cursor pointer
+
+  .list
+    > li
+      margin 0 0 30px
+    .title
+      font-size 1.8rem
+      margin 0 0 10px
+      +sp()
+        width 100%
+        margin-bottom 10px
+        text-align left
+        font-size 1.4rem
+  .colWrap
+    display flex
+    justify-content space-between
+    .col
+      width 50%
+      margin-right 10px
+      + .col
+        margin 0 0 0 10px
+  .colWrap2
+    display flex
+    .col2
+      width calc(100% - 6em)
+      &.-text
+        width 6em
+        padding 17px 0 0
+        +sp()
+          padding 12px 0 0
+
+  // label
+  .label
+    display block
+  
+  .checkboxLabel
+    cursor pointer
+    font-size 1.4rem
+    padding-left 20px
+    display block
+
+  .choiceLabel
+    margin-bottom 15px
+    display block
+  
+  .formInputOther
+    margin-top 15px
+    display none
+
+  // select
+  .formSelectWrap
+    position relative
+    &::after
+      content ""
+      position absolute
+      top 30px
+      right 15px
+      z-index -1
+      width 0
+      height 0
+      margin-top -6px
+      border 8px solid transparent
+      border-radius 4px
+      border-top 10px solid #000
+      +sp()
+        top 24px
+
+
+  .formSelect
+  .formInputText
+  .formTextArea
+    width 100%
+    padding 15px 20px
+    background none
+    border 1px solid #D3D3D3
+    font-size 1.6rem
+    letter-spacing 0.2em
+    line-height 1.5
+    +sp()
+      font-size 1.4rem
+      padding 10px 15px
+  .formSelect
+    &::-ms-expand
+      display none
+  
+  // textarea
+  .formTextArea
+    height 156px
+    +sp()
+      height 220px
+
+  // checkbox
+  .formCheckboxWrap
+    position relative
+    margin 0 0 10px
+  .formCheckbox
+    position absolute
+    top 3px
+    left 0
+    border 1px solid #000
+    width 16px
+    height 16px
+    &:checked
+      + .checkboxLabel
+        &::before
+          position absolute
+          top 7px
+          left 3px
+          z-index 1
+          content ""
+          width 10px
+          height 6px
+          border-left 2px solid #000
+          border-bottom 2px solid #000
+          transform rotate(-45deg)
+
+
+  // Submit
+  .b-btnWrap
+    margin 50px auto 0
+    text-align center
+    +sp()
+      margin 30px auto 0
+
+  .formSubmitWrap
+    text-align center
+    margin 40px 0 0
+    .text1
+      font-size 1.8rem
+      margin 0 0 40px
+      +sp()
+        font-size 1.4rem
+  .formSubmit
+    max-width 320px
+    width 100%
+    padding 15px
+    border-radius: 80px
+    font-size 2rem
+    border 1px solid #F7CF49
+    +sp()
+      font-size 1.6rem
+    &::after
+      display none
+
+
+  // エラー
+  .error
+    color #f00
